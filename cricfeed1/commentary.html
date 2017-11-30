@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>ScoreBoard</title>
+    	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+ 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="css/lavenderTheme.css"/> 
+    	<link rel="stylesheet" type="text/css" href="css/mycss.css"/>
+    	<style type="text/css">
+    		thead,th{
+    			background-color: #ccccb3;
+    			border-radius: 1pt;
+    		}
+    	</style>
+  </head>
+  <body>
+  		<div class="rca-container" >
+      		<div class="rca-row">
+        		<div class="rca-column-12">
+          			<div class="rca-logo">
+            			<h2>
+              				<span>
+              					<img src="images/logo-01.svg" style="width: 50px;">
+              				</span>
+              				<span>CricFeeds</span>
+            			</h2>
+        		    </div>
+        		</div>
+      		</div>
+      		<div class="rca-row">
+        		<div class="rca-column-12">
+          			<div class="rca-menu-scroll rca-left-border">
+            			<ul class="rca-season-list" id="mypos">
+            				<li>
+                        		<a href="index.html">Home</a>
+                      		</li>
+              				<li>
+                				<a href="livecores.html">Live Scores</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Schedule</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Archives</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">News</a>
+              				</li>	
+              				<li>
+                				<a href="livecores.html">Teams</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Series</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Videos</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Rankings</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Photos</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Careers</a>
+              				</li>
+              				<li>
+                				<a href="livecores.html">Contack Us</a>
+              				</li>
+            			</ul>
+          			</div>
+        		</div>
+      		</div>
+      		<div class="rca-col">
+          		<div class="rca-medium-wid">
+            		<div class="rca-padding" id="commentary">
+                    <h1 id="matchheading"></h1>
+                    <p>
+                        <span id="series">Series: </span>
+                        <span id="venue" style="position: relative;left: 30px">Venue: </span>
+                        <span id="da" style="position: relative;left: 80px">Date & Time: </span>
+                    </p>
+                    <br/>
+                    <nav id="myselect">
+                        <a href="" style="position: relative;left: 10px">Commentary</a>
+                        <a href="" id="score" style="position: relative;left: 30px">ScoreCard</a>
+                        <a href="/js/" id="high" style="position: relative;left: 60px">HighLights</a>
+                        <a href="/jquery/" id="points" style="position: relative;left: 80px">Points Table</a>
+                        <hr></hr>
+                    </nav>
+                    <h2 id="team"></h2>
+                    <h4 id="status"></h4>
+                    <table cellspacing="0" cellpadding="0">
+                    		<thead>
+                    			<th>&nbspBatsMan&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>R&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>B&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>4s&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>6s&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>SR&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    		</thead>
+
+                    		<tr>
+                    			<td id="batsman1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="run1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="ball1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="4s1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="6s1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="sr1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    		</tr>
+                    		<tr>
+                    			<td id="batsman2"></td>
+                    			<td id="run2"></td>
+                    			<td id="ball2"></td>
+                    			<td id="4s2"></td>
+                    			<td id="6s2"></td>
+                    			<td id="sr2"></td>
+                    		</tr>
+                    </table>
+                    <br>
+                    <table cellspacing="0" cellpadding="0">
+                    		<thead>
+                    			<th>&nbspBowler&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>O&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>M&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>R&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>w&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    			<th>ECO&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                    		</thead>
+
+                    		<tr>
+                    			<td id="bowler1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="o1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="m1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="r1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="w1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    			<td id="eco1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                    		</tr>
+                    		<tr>
+                    			<td id="bowler2"></td>
+                    			<td id="o2"></td>
+                    			<td id="m2"></td>
+                    			<td id="r2"></td>
+                    			<td id="w2"></td>
+                    			<td id="eco2"></td>
+                    		</tr>
+                    </table>
+                    <br><br><br>
+            		</div>
+            		<div id="comen" style="color: black">
+            			<h2 style="position: relative;left: 20px">Commentary</h2>
+            		</div>         
+          		</div>
+        	</div>
+    </div>
+  </body>
+  <script type="text/javascript">
+      document.body.onload = init();
+      function init()
+      {
+          xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = display;
+
+          url=localStorage.getItem("url");
+          
+          localStorage.removeItem("url");
+          xhr.open("GET","Script/commentary.php?url="+url,true);
+          xhr.send();
+      }
+      function display()
+      {
+          divcom = document.getElementById("commentary");
+          if(xhr.readyState==4&&xhr.status ==200)
+          {
+              xmlnode = xhr.responseXML.documentElement;
+              matchid=xmlnode.getElementsByTagName("match")[0];
+              state = xmlnode.getElementsByTagName("state")[0];
+              date = xmlnode.getElementsByTagName("Tme")[0];
+              document.getElementById("matchheading").innerHTML=matchid.getAttribute('mchDesc')+" - Live Commentary";
+               document.getElementById("series").innerHTML+=matchid.getAttribute('srs');
+            	document.getElementById("venue").innerHTML+=matchid.getAttribute('grnd')+","+matchid.getAttribute('vcity');	
+            	document.getElementById("da").innerHTML+=date.getAttribute('Dt')+"   "+date.getAttribute("stTme");
+            	document.getElementById("team").innerHTML=xmlnode.getElementsByTagName("btTm")[0].getAttribute("sName")+"  "+xmlnode.getElementsByTagName("Inngs")[0].getAttribute("r")+"/"+xmlnode.getElementsByTagName("Inngs")[0].getAttribute("wkts");
+            	document.getElementById("batsman1").innerHTML=xmlnode.getElementsByTagName("btsmn")[0].getAttribute("sName");
+            	document.getElementById("run1").innerHTML=xmlnode.getElementsByTagName("btsmn")[0].getAttribute("r");
+            	document.getElementById("ball1").innerHTML=xmlnode.getElementsByTagName("btsmn")[0].getAttribute("b");
+            	document.getElementById("sr1").innerHTML=100.0
+            	document.getElementById("4s1").innerHTML=xmlnode.getElementsByTagName("btsmn")[0].getAttribute("frs");
+            	document.getElementById("6s1").innerHTML=xmlnode.getElementsByTagName("btsmn")[0].getAttribute("sxs");
+            	document.getElementById("batsman2").innerHTML=xmlnode.getElementsByTagName("btsmn")[1].getAttribute("sName");
+            	document.getElementById("run2").innerHTML=xmlnode.getElementsByTagName("btsmn")[1].getAttribute("r");
+            	document.getElementById("ball2").innerHTML=xmlnode.getElementsByTagName("btsmn")[1].getAttribute("b");
+            	document.getElementById("4s2").innerHTML=xmlnode.getElementsByTagName("btsmn")[1].getAttribute("frs");
+            	document.getElementById("6s2").innerHTML=xmlnode.getElementsByTagName("btsmn")[1].getAttribute("sxs");
+            	document.getElementById("sr2").innerHTML=109.0
+            	document.getElementById("bowler1").innerHTML=xmlnode.getElementsByTagName("blrs")[0].getAttribute("sName");
+            	document.getElementById("o1").innerHTML=xmlnode.getElementsByTagName("blrs")[0].getAttribute("ovrs");
+            	document.getElementById("m1").innerHTML=xmlnode.getElementsByTagName("blrs")[0].getAttribute("mdns");
+            	document.getElementById("r1").innerHTML=xmlnode.getElementsByTagName("blrs")[0].getAttribute("r");
+            	document.getElementById("w1").innerHTML=xmlnode.getElementsByTagName("blrs")[0].getAttribute("wkts");
+            	document.getElementById("eco1").innerHTML=6.2
+            	document.getElementById("bowler2").innerHTML=xmlnode.getElementsByTagName("blrs")[1].getAttribute("sName");
+            	document.getElementById("o2").innerHTML=xmlnode.getElementsByTagName("blrs")[1].getAttribute("ovrs");
+            	document.getElementById("m2").innerHTML=xmlnode.getElementsByTagName("blrs")[1].getAttribute("mdns");
+            	document.getElementById("r2").innerHTML=xmlnode.getElementsByTagName("blrs")[1].getAttribute("r");
+            	document.getElementById("w2").innerHTML=xmlnode.getElementsByTagName("blrs")[1].getAttribute("wkts");
+            	document.getElementById("eco2").innerHTML=9.0
+            	//putting comments
+            	com = xmlnode.getElementsByTagName("c");
+            	comen = document.getElementById("comen");
+            	//div.innerHTML="<br><br>"
+            	var txt="";
+            	for(i=0;i<com.length;i++)
+            	{
+            		arr=com[i].childNodes;
+            		for(j=0;j<arr.length;j++)
+            		{
+            			div = document.createElement("div");
+            			div.innerHTML=arr[j].data+"<br><br><br>";
+            			div.style.position="relative";
+            			div.style.left="30px"
+            			comen.appendChild(div);
+            			//txt+=arr[j].data+"<br/>";
+            		}
+            	}
+            	//comen.innerHTML=txt;
+            	
+          }
+      }
+  </script>
+</html>

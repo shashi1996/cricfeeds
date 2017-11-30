@@ -1,0 +1,32 @@
+	<mchDetails noofmchs="1">
+	
+	
+		<match id="10" type="ODI" srs="Pakistan tour of West Indies, 2017" mchDesc="WI vs Pak" mnum="3rd ODI"  vcity="Guyana" vcountry="West Indies" grnd="Providence Stadium" datapath="http://synd.cricbuzz.com/j2me/1.0/match/2017/2017_WI_PAK/WI_PAK_APR11/">
+	 <state mchState="inprogress" status="Pak need 226 runs" TW="WI" decisn="Batting" addnStatus="" splStatus="">
+	</state>
+	<Tm id="10" Name="WI" sName="WI"  flag='1'/>
+	<Tm id="3" Name="Pak" sName="PAK"  flag='1'/>
+	
+	
+	<Tme Dt="Apr 11 2017" stTme="13:30" enddt ="Apr 11 2017" ></Tme>		
+
+	<mscr>
+		<inngsdetail noofovers="50" rrr="4.9" crr="2.09" cprtshp="8(22)"/>
+	<btTm id="3" sName="PAK">
+			<Inngs desc="Inns" r="8"  Decl="0" FollowOn="0" ovrs="3.5" wkts="1"/>
+	</btTm>
+	<blgTm id="10" sName="WI">
+			<Inngs desc="Inns" r="233"  Decl="0" FollowOn="0" ovrs="50" wkts="9"/>
+	</blgTm>
+				<btsmn id="1787"  sName="Ahmed Shehzad*" r="3" b="12" frs="0" sxs="0" />
+				<btsmn id="8359"  sName="Babar Azam" r="3" b="10" frs="0" sxs="0" />
+				<blrs id="8313" sName="Holder*" r="4" wkts="0" ovrs="1.5" mdns="1" />
+				<blrs id="8092" sName="Gabriel" r="4" wkts="1" ovrs="2" mdns="0" />
+
+	</mscr>
+		<comm lines="12">
+			<c><![CDATA[3.4 Holder to Babar Azam, 1 run, hurry, hurry .. Shehzad makes it.]]></c><c><![CDATA[3.3 Holder to Ahmed Shehzad, 1 run, full at the stumps, Shehzad knocks it to mid-on for a single]]></c><c><![CDATA[3.2 Holder to Ahmed Shehzad, no run, back of a length delivery outside off, punched to point]]></c><c><![CDATA[3.2 Holder to Ahmed Shehzad, wide, slants it down the leg-side for a wide]]></c><c><![CDATA[3.1 Holder to Babar Azam, 1 run, back of a length delivery outside off, stabbed down to third man]]></c><comm-break/><c><![CDATA[2.6 Gabriel to Ahmed Shehzad, 2 runs, on the hips, clipped away to the left of long leg]]></c><c><![CDATA[2.5 Gabriel to Ahmed Shehzad, no run, dropped at mid-on! Pakistan are absolutely rocking right now, and this could have put them under serious pressure. A full ball, stops on Shehzad as he closes the bat-face. Almost like Kamran Akmal got out. Only that this time the ball pops up to the left of mid-on and it's not a straightforward chance. Walton has to sprint to his left. He dives full stretch but can't cling on. Once he got there, he really should have taken it]]></c><c><![CDATA[2.4 Gabriel to Ahmed Shehzad, no run, full around off, Shehzad plays it down to mid-on]]></c><c><![CDATA[2.3 Gabriel to Babar Azam, 1 run, oh trouble! The two batsmen collide mid-pitch. Gosh, that's a nasty bump for both of them. Shehzad's helmet goes flying off, he loses his bat but still has the presence of mind to go through and plant his foot inside the crease. He might have been gone with a direct hit]]></c><c><![CDATA[2.2 Gabriel to Babar Azam, no run, what tight bowling. Hitting a back of length and bowling straight lines. Azam is happy to stay in the crease and defend]]></c><c><![CDATA[2.1 Gabriel to Babar Azam, no run, back of a length at the stumps, Azam clips it to square leg]]></c><comm-break/><c><![CDATA[1.6 Holder to Ahmed Shehzad, no run, slanted in on middle from a good length, Shehzad works it to short mid-wicket. Holder starts with a maiden]]></c>
+		</comm>
+	</match>
+	
+	 </mchDetails>

@@ -1,0 +1,30 @@
+#mypos li
+{
+    	position: relative;
+    	left:70px;
+}
+#mypos li a:hover
+{
+        background:-webkit-linear-gradient(white,red);
+        color: black;
+        border-radius:10px;
+}
+.rca-col
+{
+	position: relative;
+  	min-height: 1px;
+  	padding-right: 15px;
+  	padding-left: 15px;
+}
+.rca-medium-wid {
+  min-width: 1140px;
+  min-height: 1000px;
+  background-color: #fff;
+  margin: 10px 0; 
+}
+#co a:hover
+{
+        background:-webkit-linear-gradient(white,red);
+        color: black;
+        border-radius:10px;
+}

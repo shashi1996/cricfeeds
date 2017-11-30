@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ScoreBoard</title>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/lavenderTheme.css"/> 
+      <link rel="stylesheet" type="text/css" href="css/mycss.css"/>
+      <style type="text/css">
+        thead,th{
+          background-color: #ccccb3;
+          border-radius: 1pt;
+        }
+      </style>
+  </head>
+  <body onload="getfeed()">
+      <div class="rca-container" >
+          <div class="rca-row">
+            <div class="rca-column-12">
+                <div class="rca-logo">
+                  <h2>
+                      <span>
+                        <img src="images/logo-01.svg" style="width: 50px;">
+                      </span>
+                      <span>CricFeeds</span>
+                  </h2>
+                </div>
+            </div>
+          </div>
+          <div class="rca-row">
+            <div class="rca-column-12">
+                <div class="rca-menu-scroll rca-left-border">
+                  <ul class="rca-season-list" id="mypos">
+                    <li>
+                            <a href="index.html">Home</a>
+                          </li>
+                      <li>
+                        <a href="livecores.html">Live Scores</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Schedule</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Archives</a>
+                      </li> 
+                      <li>
+                        <a href="livecores.html">Teams</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Series</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Videos</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Rankings</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Photos</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Careers</a>
+                      </li>
+                      <li>
+                        <a href="livecores.html">Contack Us</a>
+                      </li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <div class="rca-col">
+              <div class="rca-medium-wid">
+                <div class="rca-padding" id="commentary">
+                 <div class="rca-padding" id="commentary" style="background-color: #D3D3D3"> <h2><a id="a1"></a></h2><div style="position: relative;left: 30px" id="p1"></div></div><br>
+                  <div class="rca-padding" id="commentary" style="background-color: #F5F5F5 "><h2><a id="a2"></a></h2><div id="p2"></div></div><br>
+                  <div class="rca-padding" id="commentary" style="background-color: #D3D3D3 "><h2><a id="a3"></a></h2><div id="p3"></div></div><br>
+                  <div class="rca-padding" id="commentary" style="background-color: #F5F5F5 "><h2><a id="a4"></a></h2><div id="p4"></div></div><br>
+                  <div class="rca-padding" id="commentary" style="background-color: #D3D3D3 "><h2><a id="a5"></a></h2><div id="p4"></div></div><br>
+                  <div class="rca-padding" id="commentary" style="background-color: #F5F5F5 "><h2><a id="a6"></a></h2><div id="p6"></div></div><br>
+               
+                </div>
+                     
+              </div>
+          </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+     function getfeed()
+{
+  xhr=new XMLHttpRequest();
+  xhr.onreadystatechange=refresh;
+  xhr.open("GET","getfeeds.php",true);
+  xhr.send();
+  
+}
+function refresh()
+{ 
+  if(xhr.readyState==4 && xhr.status==200)
+  {   
+    
+    xmlnode = xhr.responseXML;
+    a = document.getElementById("commentary");
+   
+    //alert("xmlnode"+xmlnode);
+    insertfeeds();       
+  }
+}
+
+function insertfeeds()
+{
+  
+    a = document.getElementById("a1");
+    //alert("xmlnode2"+a);
+    //items = rssnode.getElementsByTagName("item");
+     link = xmlnode.getElementsByTagName("link");
+     //alert(link[i]);
+    a.href = link[1].firstChild.nodeValue
+    title = xmlnode.getElementsByTagName("title")[1].firstChild.nodeValue;
+    a.innerHTML= title;
+    p = document.getElementById("p1");
+    dat=xmlnode.getElementsByTagName("description")[1].firstChild.nodeValue;
+    p.innerHTML=dat;
+
+    a = document.getElementById("a2");
+    //alert("xmlnode2"+a);
+    //items = rssnode.getElementsByTagName("item");
+     link = xmlnode.getElementsByTagName("link");
+     //alert(link[i]);
+    a.href = link[2].firstChild.nodeValue
+    title = xmlnode.getElementsByTagName("title")[2].firstChild.nodeValue;
+    a.innerHTML= title;
+    p = document.getElementById("p2");
+    dat=xmlnode.getElementsByTagName("description")[2].firstChild.nodeValue;
+    p.innerHTML=dat;
+
+    a = document.getElementById("a3");
+    //alert("xmlnode2"+a);
+    //items = rssnode.getElementsByTagName("item");
+     link = xmlnode.getElementsByTagName("link");
+     //alert(link[i]);
+    a.href = link[3].firstChild.nodeValue
+    title = xmlnode.getElementsByTagName("title")[3].firstChild.nodeValue;
+    a.innerHTML= title;
+    p = document.getElementById("p3");
+    dat=xmlnode.getElementsByTagName("description")[3].firstChild.nodeValue;
+    p.innerHTML=dat;
+
+    a = document.getElementById("a4");
+    //alert("xmlnode2"+a);
+    //items = rssnode.getElementsByTagName("item");
+     link = xmlnode.getElementsByTagName("link");
+     //alert(link[i]);
+    a.href = link[1].firstChild.nodeValue
+    title = xmlnode.getElementsByTagName("title")[4].firstChild.nodeValue;
+    a.innerHTML= title;
+    p = document.getElementById("p4");
+    dat=xmlnode.getElementsByTagName("description")[4].firstChild.nodeValue;
+    p.innerHTML=dat;
+
+    a = document.getElementById("a5");
+    //alert("xmlnode2"+a);
+    //items = rssnode.getElementsByTagName("item");
+     link = xmlnode.getElementsByTagName("link");
+     //alert(link[i]);
+    a.href = link[1].firstChild.nodeValue
+    title = xmlnode.getElementsByTagName("title")[5].firstChild.nodeValue;
+    a.innerHTML= title;
+    p = document.getElementById("p5");
+    dat=xmlnode.getElementsByTagName("description")[5].firstChild.nodeValue;
+    p.innerHTML=dat;
+
+    a = document.getElementById("a6");
+    //alert("xmlnode2"+a);
+    //items = rssnode.getElementsByTagName("item");
+     link = xmlnode.getElementsByTagName("link");
+     //alert(link[i]);
+    a.href = link[1].firstChild.nodeValue
+    title = xmlnode.getElementsByTagName("title")[6].firstChild.nodeValue;
+    a.innerHTML= title;
+   p = document.getElementById("p6");
+   dat=xmlnode.getElementsByTagName("description")[6].firstChild.nodeValue;
+   p.innerHTML=dat;
+  
+}
+  </script>
+</html>
